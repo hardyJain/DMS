@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'DMSFont';
+  src:  url('fonts/DMSFont.eot?jwy6u2');
+  src:  url('fonts/DMSFont.eot?jwy6u2#iefix') format('embedded-opentype'),
+    url('fonts/DMSFont.ttf?jwy6u2') format('truetype'),
+    url('fonts/DMSFont.woff?jwy6u2') format('woff'),
+    url('fonts/DMSFont.svg?jwy6u2#DMSFont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'DMSFont' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-d:before {
+  content: "\44";
+}
+.icon-l:before {
+  content: "\4c";
+}
+.icon-r:before {
+  content: "\52";
+}
+.icon-home:before {
+  content: "\48";
+}
+.icon-user-check:before {
+  content: "\55";
+}
+
