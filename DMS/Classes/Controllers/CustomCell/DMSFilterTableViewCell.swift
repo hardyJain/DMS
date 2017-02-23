@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import SkyFloatingLabelTextField
 
 class DMSFilterTableViewCell: UITableViewCell {
 
+    @IBOutlet var txtContent: SkyFloatingLabelTextFieldWithIcon!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

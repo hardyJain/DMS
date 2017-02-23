@@ -58,11 +58,14 @@ struct Constants {
         static let homeTableSectionCellIdentifier: String = "home_table_section_cell_identifier"
         static let homeTableRowCellIdentifier: String = "home_table_row_cell_identifier"
         static let filterTableCellIdentifier: String = "filter_table_view_cell_identifier"
+        static let filterTwoTextTableCellIdentifier: String = "filter_two_text_table_cell_identifier"
+        static let filterRadioTableCellIdentifier: String = "filter_radio_table_cell_identifier"
     }
     
     // MARK: - Storyboard Segue Identifiers
     struct SegueIdentifiers {
         static let loginToHomeSegue: String = "login_to_home_segue"
+        static let filterViewSegue: String = "home_to_filter_view_segue"
     }
     
     struct Font {
