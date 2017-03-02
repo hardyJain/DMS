@@ -10,7 +10,6 @@
 		096EDC56D1CC354B5370A9D9 /* Pods_DMSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98AA2569C4A2D6FF677EC6E8 /* Pods_DMSTests.framework */; };
 		0F87EEA177A461E2139E7FE8 /* Pods_DMS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2CDDB3DFAB9715859CE004 /* Pods_DMS.framework */; };
 		1971A59512081172F668FDF9 /* Pods_DMSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEEEDBD609E3375E8DE890C /* Pods_DMSUITests.framework */; };
-		72068E0B1E5D564D003655D1 /* DMSFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 728CDDBD1E5C3E2E009EA231 /* DMSFont.ttf */; };
 		72068E551E5D5C5C003655D1 /* REFrostedViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72068E541E5D5C5C003655D1 /* REFrostedViewController.framework */; };
 		721D13D71E55759600917A1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D13D61E55759600917A1F /* AppDelegate.swift */; };
 		721D13DC1E55759600917A1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721D13DA1E55759600917A1F /* Main.storyboard */; };
@@ -18,6 +17,11 @@
 		721D13E11E55759600917A1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721D13DF1E55759600917A1F /* LaunchScreen.storyboard */; };
 		721D13EC1E55759700917A1F /* DMSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D13EB1E55759700917A1F /* DMSTests.swift */; };
 		721D13F71E55759700917A1F /* DMSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D13F61E55759700917A1F /* DMSUITests.swift */; };
+		7269C3AF1E5EC17900CCD916 /* DMSFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269C3AE1E5EC17900CCD916 /* DMSFilterViewController.swift */; };
+		7269C3B11E5EE0D600CCD916 /* DMSFilterTwoTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269C3B01E5EE0D600CCD916 /* DMSFilterTwoTextTableViewCell.swift */; };
+		7269C3B31E5EE0ED00CCD916 /* DMSFilterRadioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269C3B21E5EE0ED00CCD916 /* DMSFilterRadioTableViewCell.swift */; };
+		7269C3B51E5EF5DE00CCD916 /* DMSFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7269C3B41E5EF14C00CCD916 /* DMSFont.ttf */; };
+		72819CE71E66E0B90024758E /* DMSFilterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72819CE61E66E0B90024758E /* DMSFilterInfo.swift */; };
 		728CDDAA1E5C03D3009EA231 /* HSToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728CDDA91E5C03D3009EA231 /* HSToolBar.swift */; };
 		728CDDAC1E5C09B7009EA231 /* DMSTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728CDDAB1E5C09B7009EA231 /* DMSTag.swift */; };
 		728CDDB31E5C1F2E009EA231 /* profile_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 728CDDB21E5C1F2E009EA231 /* profile_icon.png */; };
@@ -39,6 +43,8 @@
 		729B07541E5B19C500B71F0A /* DMSRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B07531E5B19C500B71F0A /* DMSRootViewController.swift */; };
 		729B07561E5B1A9200B71F0A /* DMSSlideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B07551E5B1A9200B71F0A /* DMSSlideMenuTableViewController.swift */; };
 		729B07591E5B298400B71F0A /* DMSSlideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B07581E5B298400B71F0A /* DMSSlideMenuTableViewCell.swift */; };
+		72D52B7B1E643BCB00B62BC7 /* DMSLoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D52B7A1E643BCB00B62BC7 /* DMSLoginInfo.swift */; };
+		72D52B7D1E643E0E00B62BC7 /* DMSWebRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D52B7C1E643E0E00B62BC7 /* DMSWebRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,11 +80,15 @@
 		721D13F21E55759700917A1F /* DMSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DMSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		721D13F61E55759700917A1F /* DMSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMSUITests.swift; sourceTree = "<group>"; };
 		721D13F81E55759700917A1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7269C3AE1E5EC17900CCD916 /* DMSFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSFilterViewController.swift; sourceTree = "<group>"; };
+		7269C3B01E5EE0D600CCD916 /* DMSFilterTwoTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSFilterTwoTextTableViewCell.swift; sourceTree = "<group>"; };
+		7269C3B21E5EE0ED00CCD916 /* DMSFilterRadioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSFilterRadioTableViewCell.swift; sourceTree = "<group>"; };
+		7269C3B41E5EF14C00CCD916 /* DMSFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = DMSFont.ttf; path = icomoon88853/fonts/DMSFont.ttf; sourceTree = "<group>"; };
+		72819CE61E66E0B90024758E /* DMSFilterInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSFilterInfo.swift; sourceTree = "<group>"; };
 		728CDDA91E5C03D3009EA231 /* HSToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSToolBar.swift; sourceTree = "<group>"; };
 		728CDDAB1E5C09B7009EA231 /* DMSTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSTag.swift; sourceTree = "<group>"; };
 		728CDDB21E5C1F2E009EA231 /* profile_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_icon.png; sourceTree = "<group>"; };
 		728CDDB91E5C293E009EA231 /* DMSHomeTableViewRowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSHomeTableViewRowCell.swift; sourceTree = "<group>"; };
-		728CDDBD1E5C3E2E009EA231 /* DMSFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = DMSFont.ttf; path = icomoon88699/fonts/DMSFont.ttf; sourceTree = "<group>"; };
 		728CDDC21E5C419B009EA231 /* DMSHomeSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSHomeSectionView.swift; sourceTree = "<group>"; };
 		728CDDC61E5C4279009EA231 /* DMSHomeTableViewSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMSHomeTableViewSection.xib; sourceTree = "<group>"; };
 		728CDDCA1E5C606A009EA231 /* DMSFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSFilterTableViewCell.swift; sourceTree = "<group>"; };
@@ -99,6 +109,8 @@
 		729B07531E5B19C500B71F0A /* DMSRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSRootViewController.swift; sourceTree = "<group>"; };
 		729B07551E5B1A9200B71F0A /* DMSSlideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSSlideMenuTableViewController.swift; sourceTree = "<group>"; };
 		729B07581E5B298400B71F0A /* DMSSlideMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSSlideMenuTableViewCell.swift; sourceTree = "<group>"; };
+		72D52B7A1E643BCB00B62BC7 /* DMSLoginInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSLoginInfo.swift; sourceTree = "<group>"; };
+		72D52B7C1E643E0E00B62BC7 /* DMSWebRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSWebRequest.swift; sourceTree = "<group>"; };
 		810DE064CC14041841BDCED6 /* Pods-DMSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DMSUITests/Pods-DMSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		98AA2569C4A2D6FF677EC6E8 /* Pods_DMSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DMSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B1B7F03393B08CEDD7A253 /* Pods-DMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMS.release.xcconfig"; path = "Pods/Target Support Files/Pods-DMS/Pods-DMS.release.xcconfig"; sourceTree = "<group>"; };
@@ -234,6 +246,7 @@
 				729B07431E5AD26500B71F0A /* CustomCell */,
 				729B07411E5ACC6B00B71F0A /* DMSLoginTableViewController.swift */,
 				729B07461E5AF5AB00B71F0A /* DMSHomeTableViewController.swift */,
+				7269C3AE1E5EC17900CCD916 /* DMSFilterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -248,6 +261,8 @@
 		721D14091E55779F00917A1F /* DataClasses */ = {
 			isa = PBXGroup;
 			children = (
+				72D52B7A1E643BCB00B62BC7 /* DMSLoginInfo.swift */,
+				72819CE61E66E0B90024758E /* DMSFilterInfo.swift */,
 			);
 			path = DataClasses;
 			sourceTree = "<group>";
@@ -266,6 +281,7 @@
 		721D140B1E55779F00917A1F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				72D52B7C1E643E0E00B62BC7 /* DMSWebRequest.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -273,6 +289,7 @@
 		721D140C1E55779F00917A1F /* UIControls */ = {
 			isa = PBXGroup;
 			children = (
+				72D05CB51E601FE0006828D6 /* PickerView */,
 				728CDDBF1E5C3FE0009EA231 /* CustomeView */,
 				728CDDA81E5C03B5009EA231 /* HSToolBar */,
 			);
@@ -300,7 +317,7 @@
 		721D140F1E5577A900917A1F /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				728CDDBD1E5C3E2E009EA231 /* DMSFont.ttf */,
+				7269C3B41E5EF14C00CCD916 /* DMSFont.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -352,6 +369,8 @@
 				729B07441E5AD28500B71F0A /* LoginTableViewCell.swift */,
 				728CDDB91E5C293E009EA231 /* DMSHomeTableViewRowCell.swift */,
 				728CDDCA1E5C606A009EA231 /* DMSFilterTableViewCell.swift */,
+				7269C3B01E5EE0D600CCD916 /* DMSFilterTwoTextTableViewCell.swift */,
+				7269C3B21E5EE0ED00CCD916 /* DMSFilterRadioTableViewCell.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -373,6 +392,13 @@
 				729B07581E5B298400B71F0A /* DMSSlideMenuTableViewCell.swift */,
 			);
 			path = CustomeCellMenu;
+			sourceTree = "<group>";
+		};
+		72D05CB51E601FE0006828D6 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PickerView;
 			sourceTree = "<group>";
 		};
 		AF0CB3475C9AEED935413D63 /* Frameworks */ = {
@@ -479,7 +505,7 @@
 				TargetAttributes = {
 					721D13D21E55759600917A1F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 7U476S9H9Y;
+						DevelopmentTeam = AZJVHH4682;
 						ProvisioningStyle = Automatic;
 					};
 					721D13E61E55759700917A1F = {
@@ -519,7 +545,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72068E0B1E5D564D003655D1 /* DMSFont.ttf in Resources */,
+				7269C3B51E5EF5DE00CCD916 /* DMSFont.ttf in Resources */,
 				728CDDB31E5C1F2E009EA231 /* profile_icon.png in Resources */,
 				721D13E11E55759600917A1F /* LaunchScreen.storyboard in Resources */,
 				721D13DE1E55759600917A1F /* Assets.xcassets in Resources */,
@@ -692,20 +718,26 @@
 				721D13D71E55759600917A1F /* AppDelegate.swift in Sources */,
 				729B07341E5AB4E500B71F0A /* Utility.swift in Sources */,
 				729B073C1E5ABC0400B71F0A /* Array+Extension.swift in Sources */,
+				7269C3AF1E5EC17900CCD916 /* DMSFilterViewController.swift in Sources */,
 				729B073E1E5ABC3100B71F0A /* NSDate.swift in Sources */,
 				728CDDCB1E5C606A009EA231 /* DMSFilterTableViewCell.swift in Sources */,
+				72D52B7D1E643E0E00B62BC7 /* DMSWebRequest.swift in Sources */,
 				729B07381E5AB90800B71F0A /* Constants.swift in Sources */,
 				728CDDAC1E5C09B7009EA231 /* DMSTag.swift in Sources */,
 				729B07401E5ABD6700B71F0A /* String.swift in Sources */,
+				72819CE71E66E0B90024758E /* DMSFilterInfo.swift in Sources */,
+				7269C3B31E5EE0ED00CCD916 /* DMSFilterRadioTableViewCell.swift in Sources */,
 				728CDDAA1E5C03D3009EA231 /* HSToolBar.swift in Sources */,
 				728CDDBA1E5C293E009EA231 /* DMSHomeTableViewRowCell.swift in Sources */,
 				728CDDC31E5C419B009EA231 /* DMSHomeSectionView.swift in Sources */,
+				7269C3B11E5EE0D600CCD916 /* DMSFilterTwoTextTableViewCell.swift in Sources */,
 				729B073A1E5ABAEB00B71F0A /* UIViewController.swift in Sources */,
 				729B07471E5AF5AB00B71F0A /* DMSHomeTableViewController.swift in Sources */,
 				729B07421E5ACC6B00B71F0A /* DMSLoginTableViewController.swift in Sources */,
 				729B07591E5B298400B71F0A /* DMSSlideMenuTableViewCell.swift in Sources */,
 				729B07451E5AD28500B71F0A /* LoginTableViewCell.swift in Sources */,
 				729B074C1E5B16B400B71F0A /* DMSMenuNavigationViewController.swift in Sources */,
+				72D52B7B1E643BCB00B62BC7 /* DMSLoginInfo.swift in Sources */,
 				729B07561E5B1A9200B71F0A /* DMSSlideMenuTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -859,7 +891,7 @@
 			baseConfigurationReference = E5F77138EDA0CA823E60602B /* Pods-DMS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7U476S9H9Y;
+				DEVELOPMENT_TEAM = AZJVHH4682;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/REFrostedViewController",
@@ -879,7 +911,7 @@
 			baseConfigurationReference = 98B1B7F03393B08CEDD7A253 /* Pods-DMS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7U476S9H9Y;
+				DEVELOPMENT_TEAM = AZJVHH4682;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/REFrostedViewController",

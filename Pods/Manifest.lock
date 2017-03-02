@@ -1,18 +1,33 @@
 PODS:
+  - Alamofire (4.3.0)
   - REFrostedViewController (2.4.8)
   - SkyFloatingLabelTextField (2.0.1)
   - SVProgressHUD (2.1.2)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.3)
   - REFrostedViewController (~> 2.4)
   - SkyFloatingLabelTextField (~> 2.0.0)
-  - SVProgressHUD
+  - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
+  - SwiftyJSON
+
+EXTERNAL SOURCES:
+  SVProgressHUD:
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+
+CHECKOUT OPTIONS:
+  SVProgressHUD:
+    :commit: 803bc1e473e2861f75abf06174d9c937de7a0fe0
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   REFrostedViewController: a893b4979ba1f200c547aef9ff4c3fd5a18f5923
   SkyFloatingLabelTextField: 070e749632ffd608d6fd9db3fa488a822524997c
-  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  SVProgressHUD: d65371a8e4482380deddb9fe60e14e59ddb30eb3
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 3a6d574cbfae0fb3f59f21aefaaac3128dedb096
+PODFILE CHECKSUM: 9b0d1df42eea1aa2d72390f3c09180442d66eb19
 
 COCOAPODS: 1.2.0

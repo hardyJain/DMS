@@ -14,7 +14,8 @@ class Utility {
     // NSUserDefault Methods
     class func setUserLocalObject(object: AnyObject?, key: String) -> Bool {
         let defaults = UserDefaults.standard
-        defaults.set(defaults, forKey: key) //setObject(object, forKey: key)
+//        defaults.set(defaults, forKey: key) //setObject(object, forKey: key)
+        defaults.set(object, forKey: key)
         return defaults.synchronize()
     }
     
@@ -91,7 +92,9 @@ class Utility {
     // NSDate
     class func convertDateStringToDate(date: String!) -> NSDate! {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM dd, yyyy, hh:mm:ss a"
+//        dateFormatter.dateFormat = "MMM dd, yyyy, hh:mm:ss a"
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
         let date = dateFormatter.date(from: date)
         return date as NSDate!
     }
