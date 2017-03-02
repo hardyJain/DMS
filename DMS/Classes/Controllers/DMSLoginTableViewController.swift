@@ -8,6 +8,7 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+import SwiftyJSON
 
 class DMSLoginTableViewController: UITableViewController {
     
@@ -18,12 +19,14 @@ class DMSLoginTableViewController: UITableViewController {
     var toolBar = HSToolBar(doneOnly: false)
     
     //Variables
+    var loginInfo: DMSLoginInfo?
 
     //MARK: - UIVIew Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
             self.initLoginView()
+        loginInfo = DMSLoginInfo.init()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,9 +41,13 @@ class DMSLoginTableViewController: UITableViewController {
     
     //MARK: - IBAction Methods
     @IBAction func onLoginBtn(_ sender: UIButton) {
-        if isValidate() {
-            self.performSegue(withIdentifier: Constants.SegueIdentifiers.loginToHomeSegue, sender: self)
-        }
+        loginInfo?.email = self.txtEmail.text!
+        loginInfo?.password = self.txtPassword.text!
+//        if isValidate() {
+//            self.performSegue(withIdentifier: Constants.SegueIdentifiers.loginToHomeSegue, sender: self)
+//            self.performLoginRequest()
+            self.perforLogin()
+//        }
     }
     
     //MARK: - Other Functional Methods
@@ -69,9 +76,48 @@ class DMSLoginTableViewController: UITableViewController {
         }
         return true
     }
+    
+//    func performLoginRequest() {
+//        let params = DMSLoginInfo().getDataDictionaryForWS()
+//        DMSWebRequest.POST(url: Constants.ApiUrls.login, authType: .None, requestFormat: .StringFormat, headers: ["Device-Id": Constants.deviceId, "OS": "iOS", "OS-Version": Constants.OSVersion], params: params as [String : AnyObject]?, complition: {(result) -> Void in
+//            print("Result - \(result)")
+//            self.performSegue(withIdentifier: Constants.SegueIdentifiers.loginToHomeSegue, sender: self)
+//        }, failure: {(error) -> Void in
+//            if let err = error {
+//                print("Error - \(err)")
+//            }
+//        })
+//    }
+    
+    func perforLogin() {
+        self.showProgress(status: "Loading...")
+        let paramString = DMSLoginInfo.getDataStringForEncodedRequest(loginInfo!)
+        DMSWebRequest.POSTSTRING(requestString: paramString(),complition: {(result) -> Void in
+            print("Result - \(result)")
+            if let responseResult = result {
+                print("Response Result: \(responseResult)")
+                let jsonResult = JSON(responseResult)
+                if let accessToken = jsonResult["access_token"].string {
+                    if Utility.setUserLocalObject(object: accessToken as AnyObject?, key: Constants.UserDefault.authAccessToken) {
+                    }
+                }
+                if let refereshToken = jsonResult["refresh_token"].string {
+                    if Utility.setUserLocalObject(object: refereshToken as AnyObject?, key: Constants.UserDefault.authRefereshToken) {
+                    }
+                }
+            }
+            self.hideProgress()
+            self.performSegue(withIdentifier: Constants.SegueIdentifiers.loginToHomeSegue, sender: self)
+        }, failure: {(error) -> Void in
+            if let err = error {
+                self.hideProgress()
+                print("Error - \(err)")
+            }
+        })
+    }
 }
 
-//MARK: - Extensions 
+//MARK: - Extensions
 //Toolbar delegate methods
 extension DMSLoginTableViewController: HSToolbarDelegate {
     func onMovePrevious(sender: UIButton) {
@@ -109,15 +155,17 @@ extension DMSLoginTableViewController {
         case 0:
             self.txtEmail = cell?.txtContent
             self.txtEmail.delegate = self
+            self.txtEmail.tag = Tag.Login.email
             self.txtEmail.placeholder = "Email id"
-            self.txtEmail.text = "hardik.jain@gmail.com"
+            self.txtEmail.text = "QC"
             break
         case 1:
             self.txtPassword = cell?.txtContent
             self.txtPassword.delegate = self
+            self.txtPassword.tag = Tag.Login.password
             self.txtPassword.isSecureTextEntry = true
             self.txtPassword.placeholder = "Password"
-            self.txtPassword.text = "Hardik"
+            self.txtPassword.text = "password"
             break
         default:
             break
@@ -145,6 +193,14 @@ extension DMSLoginTableViewController: UITextFieldDelegate {
         } else {
             toolBar.btnNext.isEnabled = true
             toolBar.btnPrevious.isEnabled = true
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.tag == Tag.Login.email {
+            loginInfo?.email = self.txtEmail.text!
+        } else if textField.tag == Tag.Login.password {
+            loginInfo?.password = self.txtPassword.text!
         }
     }
 }

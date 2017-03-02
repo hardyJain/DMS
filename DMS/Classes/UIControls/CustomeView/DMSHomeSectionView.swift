@@ -7,11 +7,33 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class DMSHomeSectionView: UITableViewHeaderFooterView {
 
     @IBOutlet var lblPatientName: UILabel!
     @IBOutlet var lblUHIDTag: UILabel!
     @IBOutlet var lblUHIDNo: UILabel!
+    
+    var filterInfo: DMSFilterInfo! {
+        didSet {
+            self.lblPatientName.text = filterInfo.patientName
+            self.lblUHIDNo.text = String(filterInfo!.patientId)
+        }
+        willSet {
+            self.filterInfo = newValue
+        }
+    }
+    
+    var PatientName: String? {
+        didSet {
+            lblPatientName.text = PatientName
+        }
+    }
+    var PatientId: String? {
+        didSet {
+            lblUHIDNo.text = PatientId
+        }
+    }
 
 }
