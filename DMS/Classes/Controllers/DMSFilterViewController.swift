@@ -8,9 +8,11 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+import  RATreeView
 
 class DMSFilterViewController: UIViewController {
     //IBOutlet
+    @IBOutlet var treeView: RATreeView!
     @IBOutlet var tableViewFilter: UITableView!
     var txtIdType: SkyFloatingLabelTextFieldWithIcon?, txtId: SkyFloatingLabelTextFieldWithIcon?, txtDateFrom: SkyFloatingLabelTextFieldWithIcon?, txtDateTo: SkyFloatingLabelTextFieldWithIcon?, txtPatientName: SkyFloatingLabelTextFieldWithIcon?, txtEnterAnnotaion: SkyFloatingLabelTextFieldWithIcon?, txtSelectAnnotation: SkyFloatingLabelTextFieldWithIcon?, currentTextField: SkyFloatingLabelTextFieldWithIcon?, txtDocType: SkyFloatingLabelTextFieldWithIcon?
     var btnRadioOPD: UIButton?, btnRadioIPD: UIButton? = nil
@@ -20,6 +22,8 @@ class DMSFilterViewController: UIViewController {
 
     var datePickerFrom: UIDatePicker?
     var datePickerTo: UIDatePicker?
+    
+    let arrayTreeContent = ["Hardik","Jain","iOS","DMS","Pune","awdw"]
     
     //Variables
     let idTypeValue = ["UHID", "Reference ID"]
@@ -61,6 +65,11 @@ class DMSFilterViewController: UIViewController {
         self.datePickerTo?.datePickerMode = .date
         self.datePickerTo?.maximumDate = NSDate() as Date
         self.datePickerTo?.addTarget(self, action: #selector(onDatePickerToValueChange(sender:)), for: .valueChanged)
+        
+        self.treeView.delegate = self
+        self.treeView.dataSource = self
+//        let nib = UINib(nibName: "DMSFilterExpandTableViewCell", bundle: nil)
+        self.treeView.register(UINib(nibName: String("DMSFilterExpandTableViewCell"), bundle: nil), forCellReuseIdentifier: String(Constants.TableViewCellIdentifiers.filterExpandTableCellIdentifier))
     }
     
     //MARK: - IBAction Methods
@@ -164,6 +173,8 @@ extension DMSFilterViewController: UITableViewDataSource {
             //Setup Button
             self.txtDocType = cell.txtDocType
             self.txtDocType?.tag = Tag.Filter.docType
+            self.txtDocType?.iconFont = UIFont(name: "DMSFont", size: 17)
+            self.txtDocType?.iconText = "h"
             self.txtDocType?.delegate = self
             return cell
         case 2:
@@ -375,5 +386,27 @@ extension DMSFilterViewController: UIPickerViewDelegate {
             break
         }
     }
+}
+
+extension DMSFilterViewController: RATreeViewDataSource {
+    func treeView(_ treeView: RATreeView, numberOfChildrenOfItem item: Any?) -> Int {
+        return 1
+    }
+    
+    func treeView(_ treeView: RATreeView, cellForItem item: Any?) -> UITableViewCell {
+       
+        let cell = treeView.dequeueReusableCell(withIdentifier: Constants.TableViewCellIdentifiers.filterExpandTableCellIdentifier) as? DMSFilterExpandTableViewCell
+        
+        cell?.lblTitle.text = "Document"
+        return cell!
+    }
+    
+    func treeView(_ treeView: RATreeView, child index: Int, ofItem item: Any?) -> Any {
+        return arrayTreeContent[index]
+    }
+}
+
+extension DMSFilterViewController: RATreeViewDelegate {
+    
 }
 

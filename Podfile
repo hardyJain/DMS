@@ -9,6 +9,8 @@ target 'DMS' do
      pod 'REFrostedViewController', '~> 2.4'
      pod 'SwiftyJSON'
      pod 'Alamofire', '~> 4.3'
+     pod 'CloudTagView'
+     pod "RATreeView", "~> 2.1.2"
   # Pods for DMS
 
   target 'DMSTests' do

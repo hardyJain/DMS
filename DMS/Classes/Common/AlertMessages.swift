@@ -12,7 +12,7 @@ class AlertMessages {
     /// Get message string with index
     class func getMessage(at index: Int) -> String {
         switch index {
-            // MARK: - App Click
+        // MARK: - App Click
             
         // WS Failure (Due to network)
         case -1001, -1002, -1003, -1004, -1005, -1009:
@@ -148,12 +148,10 @@ class AlertMessages {
         case -1009:
             // The network connection was lost.
             return "The network connection was lost. Please, check the internet settings and try again.";
-            
         case 3840:
             // The operation couldn’t be completed.
             return "The operation couldn’t be completed.";
         default : return ""
-            
         }
     }
     

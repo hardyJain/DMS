@@ -184,6 +184,7 @@ class DMSWebRequest: NSObject {
                 print("statusCode should be 200, but is \(httpStatus.statusCode)")
                 print("response = \(response)")
             }
+            
             let responseString = String(data: data, encoding: String.Encoding.utf8)
             print("responseString = \(responseString)")
             if let data = responseString?.data(using: .utf8) {

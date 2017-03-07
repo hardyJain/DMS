@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SVProgressHUD
 
 extension UIViewController {
     
@@ -45,16 +46,16 @@ extension UIViewController {
 //        self.presentViewController(nav, animated: true, completion: nil)
 //    }
     
-    // Progress HUD
-//    func showProgress(status: String) {
-//        // Set ProgressHUD mask type
-//        SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.Black)
-//        SVProgressHUD.showWithStatus(status)
-//    }
-//    
-//    func hideProgress() {
-//        SVProgressHUD.dismiss()
-//    }
+   //  Progress HUD
+    func showProgress(status: String) {
+        // Set ProgressHUD mask type
+        SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.black)
+        SVProgressHUD.show(withStatus: status)
+    }
+    
+    func hideProgress() {
+        SVProgressHUD.dismiss()
+    }
     
     /// Show alert message popup with only message
     func showAlertWithTitleAndMessage(title:String, message:String) {

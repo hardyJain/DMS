@@ -14,7 +14,10 @@ struct Constants {
     // App defaults
     static let appStoreId: String = "1094602630"
     
-    static let clientId = "99645863475673498"
+    static let clientId = "334a059d82304f4e9892ee5932f81425"
+    
+    static let deviceId = UIDevice.current.identifierForVendor!.uuidString
+    static let OSVersion = UIDevice.current.systemVersion
     
     // Get device type
     static let idimo =  UI_USER_INTERFACE_IDIOM()
@@ -43,13 +46,13 @@ struct Constants {
     
     // MARK: - NSUserDefault keys
     struct UserDefault {
-        static let globalInfo: String = "vs_global_info"
-        static let loginCredentials: String = "vs_login_credentials"
-        static let loginType: String = "vs_user_login_type"
-        static let locationInfo: String = "vs_user_location"
-        static let maxCountryId: String = "vs_max_country_id"
-        static let maxStateId: String = "vs_max_state_id"
-        static let maxCityId: String = "vs_max_city_id"
+        static let authAccessToken: String = "dms_bearer_token"
+        static let authRefereshToken: String = "dms_referesh_token"
+//        static let loginType: String = "vs_user_login_type"
+//        static let locationInfo: String = "vs_user_location"
+//        static let maxCountryId: String = "vs_max_country_id"
+//        static let maxStateId: String = "vs_max_state_id"
+//        static let maxCityId: String = "vs_max_city_id"
     }
     
     struct TableViewCellIdentifiers {
@@ -58,11 +61,16 @@ struct Constants {
         static let homeTableSectionCellIdentifier: String = "home_table_section_cell_identifier"
         static let homeTableRowCellIdentifier: String = "home_table_row_cell_identifier"
         static let filterTableCellIdentifier: String = "filter_table_view_cell_identifier"
+        static let filterTwoTextTableCellIdentifier: String = "filter_two_text_table_cell_identifier"
+        static let filterRadioTableCellIdentifier: String = "filter_radio_table_cell_identifier"
+        
+        static let filterExpandTableCellIdentifier: String = "filter_expand_table_cell"
     }
     
     // MARK: - Storyboard Segue Identifiers
     struct SegueIdentifiers {
         static let loginToHomeSegue: String = "login_to_home_segue"
+        static let filterViewSegue: String = "home_to_filter_view_segue"
     }
     
     struct Font {
@@ -82,4 +90,16 @@ struct Constants {
         static let manuallyLoginKey = "vs_manually_key"
     }
     
+    // MARK: - Api URLs
+    struct ApiUrls {
+        
+        // Test Server Urls
+        static let baseUrl: String = "http://192.168.0.25:81/"
+        static let apiBaseUrl: String = baseUrl + "api/"
+        
+        // WS Urls
+        //Login
+        static let login: String = apiBaseUrl + "userLogin"
+        static let filter: String = apiBaseUrl + "result/ShowSearchResults"
+    }
 }

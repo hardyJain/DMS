@@ -43,12 +43,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func initApplicationTheme() {
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        UINavigationBar.appearance().backgroundColor = UIColor(red: 89/255, green: 177/255, blue: 213/255, alpha: 1)
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.tintColor = UIColor.white
+        navigationBarAppearace.barTintColor = UIColor(red: 89/255, green: 177/255, blue: 213/255, alpha: 1)
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().isTranslucent = true
-        UINavigationBar.appearance().barStyle = UIBarStyle.default
+
     }
 }
 
