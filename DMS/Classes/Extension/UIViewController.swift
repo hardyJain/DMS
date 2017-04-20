@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SVProgressHUD
 
 extension UIViewController {
     
@@ -21,40 +22,16 @@ extension UIViewController {
         return storyboard.instantiateViewController(withIdentifier: storyboardId)
     }
     
-//    func pushScreenWithId(screenId: Int) {
-//        let mainView: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let viewController: UIViewController = mainView.instantiateViewControllerWithIdentifier(VSPageInfo.pageNameForId(screenId))
-//        
-//        self.navigationController?.pushViewController(viewController, animated: true)
-//    }
+   //  Progress HUD
+    func showProgress(status: String) {
+        // Set ProgressHUD mask type
+        SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.black)
+        SVProgressHUD.show(withStatus: status)
+    }
     
-//    func presentScreenWithId(screenId: Int) {
-//        let mainView: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let viewController: UIViewController = mainView.instantiateViewControllerWithIdentifier(VSPageInfo.pageNameForId(screenId))
-//        
-//        self.navigationController?.present(UINavigationController.init(rootViewController: viewController), animated: true, completion: nil)
-//    }
-    
-//    func presentScreenWithId(screenId: Int,withNavigationColor navigationBarColor: UIColor) {
-//        let mainView: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let viewController: UIViewController = mainView.instantiateViewControllerWithIdentifier(VSPageInfo.pageNameForId(screenId))
-//        
-//        let nav = UINavigationController(rootViewController: viewController)
-//        nav.navigationBar.barTintColor = navigationBarColor
-//        nav.navigationBar.translucent = false
-//        self.presentViewController(nav, animated: true, completion: nil)
-//    }
-    
-    // Progress HUD
-//    func showProgress(status: String) {
-//        // Set ProgressHUD mask type
-//        SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.Black)
-//        SVProgressHUD.showWithStatus(status)
-//    }
-//    
-//    func hideProgress() {
-//        SVProgressHUD.dismiss()
-//    }
+    func hideProgress() {
+        SVProgressHUD.dismiss()
+    }
     
     /// Show alert message popup with only message
     func showAlertWithTitleAndMessage(title:String, message:String) {
@@ -62,24 +39,6 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-    
-//    func showSignInAlert() {
-//        let alert = UIAlertController(title: title, message: AlertMessages.getAlertMessageAtIndex(index: 0), preferredStyle: UIAlertControllerStyle.alert)
-//        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-//        let loginAction = UIAlertAction(title: "Sign In", style: .default) { (action) in
-//            let sb = UIStoryboard(name: "Main", bundle: nil)
-//            let loginController = sb.instantiateViewControllerWithIdentifier("sign") as! VSLoginView
-//            loginController.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
-//            let loginNav = UINavigationController(rootViewController: loginController)
-//            loginNav.navigationBar.barTintColor = UIColor.blackColor()
-//            loginNav.navigationBar.translucent = false
-//            self.frostedViewController.hideMenuViewController()
-//            self.presentViewController(loginNav, animated: true, completion: nil)
-//        }
-//        alert.addAction(loginAction)
-//        self.present(alert, animated: true, completion: nil)
-//    }
-    
     
     func showAlert(message msg: String) {
         let alert = UIAlertController(title: Constants.alertTitle, message: msg, preferredStyle: UIAlertControllerStyle.alert)
@@ -94,11 +53,11 @@ extension UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    // Add left menu button to navigation controller
-    //    func addLeftSideMenuButton() {
-    //        self.addLeftMenuButton()
-    //        self.enableSlidePanGestureForLeftMenu()
-    //    }
+    func showAlertMessageWithIndex(index: Int) {
+        let alert = UIAlertController(title: Constants.alertTitle, message: AlertMessages.getAlertMessageAtIndex(index: index), preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
     
     // Set navigation item with logo image
     func setLeftNavItemWithImage() {
@@ -127,29 +86,4 @@ extension UIViewController {
         }
         return false
     }
-    
-    
-//    func performFavorite(venueId: Int, isFavorite: Bool, complition: (_ result: Bool) -> Void) {
-//        var params = [String: AnyObject]()
-//        params["venue_id"] = venueId
-//        params["fav"] = isFavorite
-//        VSWebRequest.POST(ApiUrls.addFavorite, authType: .Bearer, params: params, complition: { (result) -> Void in
-//            if let responseResult = result {
-//                let jsonResult = JSON(responseResult)
-//                if jsonResult["Status"].string == "Success" {
-//                    complition(result: true)
-//                } else {
-//                    complition(result: false)
-//                }
-//                print("Response Result: \(responseResult)")
-//            }
-//        }) { (error) -> Void in
-//            complition(result: false)
-//            var errorCode = 0
-//            if let err = error {
-//                errorCode = err.code
-//            }
-//            self.showAlert(message: AlertMessages.getMessage(at: errorCode))
-//        }
-//    }
 }

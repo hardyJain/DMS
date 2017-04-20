@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "02D7F3FDF76503B14F39D8E7F9CCFA52"
-               BuildableName = "SkyFloatingLabelTextField.framework"
-               BlueprintName = "SkyFloatingLabelTextField"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "721D13D21E55759600917A1F"
+               BuildableName = "DMS.app"
+               BlueprintName = "DMS"
+               ReferencedContainer = "container:DMS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "721D13E61E55759700917A1F"
+               BuildableName = "DMSTests.xctest"
+               BlueprintName = "DMSTests"
+               ReferencedContainer = "container:DMS.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "721D13F11E55759700917A1F"
+               BuildableName = "DMSUITests.xctest"
+               BlueprintName = "DMSUITests"
+               ReferencedContainer = "container:DMS.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "721D13D21E55759600917A1F"
+            BuildableName = "DMS.app"
+            BlueprintName = "DMS"
+            ReferencedContainer = "container:DMS.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,15 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "02D7F3FDF76503B14F39D8E7F9CCFA52"
-            BuildableName = "SkyFloatingLabelTextField.framework"
-            BlueprintName = "SkyFloatingLabelTextField"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "721D13D21E55759600917A1F"
+            BuildableName = "DMS.app"
+            BlueprintName = "DMS"
+            ReferencedContainer = "container:DMS.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -60,15 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "02D7F3FDF76503B14F39D8E7F9CCFA52"
-            BuildableName = "SkyFloatingLabelTextField.framework"
-            BlueprintName = "SkyFloatingLabelTextField"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "721D13D21E55759600917A1F"
+            BuildableName = "DMS.app"
+            BlueprintName = "DMS"
+            ReferencedContainer = "container:DMS.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '02D7F3FDF76503B14F39D8E7F9CCFA52'
-               BlueprintName = 'SkyFloatingLabelTextField'
+               BlueprintIdentifier = '88E9EC28B8B46C3631E6B242B50F4442'
+               BlueprintName = 'Alamofire'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SkyFloatingLabelTextField.framework'>
+               BuildableName = 'Alamofire.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

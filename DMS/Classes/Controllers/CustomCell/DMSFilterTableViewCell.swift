@@ -11,16 +11,19 @@ import SkyFloatingLabelTextField
 
 class DMSFilterTableViewCell: UITableViewCell {
 
-    @IBOutlet var txtContent: SkyFloatingLabelTextFieldWithIcon!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+  @IBOutlet var txtContent: SkyFloatingLabelTextFieldWithIcon!
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    // Initialization code
+    self.setupFilterCell()
+  }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+  override func setSelected(_ selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
+    // Configure the view for the selected state
+  }
+  
+  func setupFilterCell() {
+    self.txtContent?.iconFont = UIFont(name: "DMSFont", size: 20)
+  }
 }

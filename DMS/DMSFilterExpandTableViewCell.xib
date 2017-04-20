@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSFont.ttf">
+            <string>DMSFont</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filter_expand_table_cell" id="0PD-fR-39J" customClass="DMSFilterExpandTableViewCell" customModule="DMS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0PD-fR-39J" id="jlg-iA-PCs">
+                <frame key="frameInset" width="375" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1Z-cd-Kii">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPP-Ny-ezv">
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="c4m-i2-lvN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="DMSFont" family="DMSFont" pointSize="22"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <state key="normal" title="V">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFb-ed-ROR">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="2Yk-zB-YnO"/>
+                            <constraint firstAttribute="height" constant="30" id="mhc-0G-Fc3"/>
+                        </constraints>
+                        <connections>
+                            <action selector="onExpandBtn:" destination="0PD-fR-39J" eventType="touchUpInside" id="jhW-Ba-Rxm"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="leadingMargin" secondItem="ZFb-ed-ROR" secondAttribute="leading" id="AjT-RO-4Az"/>
+                    <constraint firstItem="ZFb-ed-ROR" firstAttribute="centerY" secondItem="jlg-iA-PCs" secondAttribute="centerY" id="MPY-JW-PYF"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="DPP-Ny-ezv" secondAttribute="bottom" constant="-5" id="R4S-CY-hz2"/>
+                    <constraint firstItem="K1Z-cd-Kii" firstAttribute="leading" secondItem="ZFb-ed-ROR" secondAttribute="trailing" constant="11" id="SWE-Cw-gkm"/>
+                    <constraint firstItem="DPP-Ny-ezv" firstAttribute="leading" secondItem="ZFb-ed-ROR" secondAttribute="trailing" constant="8" id="cJw-qs-6WD"/>
+                    <constraint firstAttribute="trailing" secondItem="DPP-Ny-ezv" secondAttribute="trailing" constant="15" id="eLN-C6-8qE"/>
+                    <constraint firstItem="K1Z-cd-Kii" firstAttribute="top" secondItem="jlg-iA-PCs" secondAttribute="topMargin" constant="3" id="nQg-8B-CEJ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="K1Z-cd-Kii" secondAttribute="bottom" constant="2" id="sYb-xi-zgg"/>
+                    <constraint firstItem="DPP-Ny-ezv" firstAttribute="top" secondItem="jlg-iA-PCs" secondAttribute="topMargin" constant="-3" id="vMp-3q-hw8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnExpand" destination="ZFb-ed-ROR" id="DdX-rM-WvR"/>
+                <outlet property="checkBoxbtn" destination="DPP-Ny-ezv" id="1tm-cn-ki0"/>
+                <outlet property="lblTitle" destination="K1Z-cd-Kii" id="oHA-Jj-gbV"/>
+                <outlet property="leadingConstraint" destination="AjT-RO-4Az" id="nLP-JI-GPN"/>
+            </connections>
+            <point key="canvasLocation" x="-157.5" y="-123"/>
+        </tableViewCell>
+    </objects>
+</document>

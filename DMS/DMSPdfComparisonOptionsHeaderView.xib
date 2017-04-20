@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DMSOptionsHeaderView" customModule="DMS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNP-Yt-fGj">
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <color key="textColor" white="0.15078125000000001" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgc-k3-KBG">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="gzl-3d-Yjy"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQ2-cX-7cC">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.15078125000000001" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Wgc-k3-KBG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Hae-qs-ahH"/>
+                <constraint firstItem="LNP-Yt-fGj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Pb3-ee-XEq"/>
+                <constraint firstItem="bQ2-cX-7cC" firstAttribute="leading" secondItem="LNP-Yt-fGj" secondAttribute="trailing" constant="10" id="a81-59-FiT"/>
+                <constraint firstAttribute="bottom" secondItem="Wgc-k3-KBG" secondAttribute="bottom" id="epx-ZK-9N6"/>
+                <constraint firstItem="LNP-Yt-fGj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ldm-cR-mFq"/>
+                <constraint firstAttribute="trailing" secondItem="Wgc-k3-KBG" secondAttribute="trailing" id="nH8-Xr-rE9"/>
+                <constraint firstItem="bQ2-cX-7cC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="tY3-P3-NK4"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="badgeLabel" destination="bQ2-cX-7cC" id="vIQ-5H-hCs"/>
+                <outlet property="headerLabel" destination="LNP-Yt-fGj" id="KfH-Yq-cNa"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="-208"/>
+        </view>
+    </objects>
+</document>
