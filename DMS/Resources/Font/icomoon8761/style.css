@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'DMSFont';
+  src:  url('fonts/DMSFont.eot?2p5lv5');
+  src:  url('fonts/DMSFont.eot?2p5lv5#iefix') format('embedded-opentype'),
+    url('fonts/DMSFont.ttf?2p5lv5') format('truetype'),
+    url('fonts/DMSFont.woff?2p5lv5') format('woff'),
+    url('fonts/DMSFont.svg?2p5lv5#DMSFont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'DMSFont' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logout-2:before {
+  content: "\6c";
+}
+.icon-check:before {
+  content: "\50";
+}
+.icon-square-rounded-empty-outlined-button-shape:before {
+  content: "\56";
+}
+.icon-arrowhead-pointing-to-the-right:before {
+  content: "\62";
+}
+.icon-arrows:before {
+  content: "\63";
+}
+.icon-info:before {
+  content: "\61";
+}
+.icon-file:before {
+  content: "\5a";
+}
+.icon-user-fill-01:before {
+  content: "\41";
+}
+.icon-search-01:before {
+  content: "\42";
+}
+.icon-Cross-01:before {
+  content: "\43";
+}
+.icon-calendar-01:before {
+  content: "\44";
+}
+.icon-Annotation-01:before {
+  content: "\45";
+}
+.icon-filter:before {
+  content: "\46";
+}
+.icon-user-check-01:before {
+  content: "\47";
+}
+.icon-user-01:before {
+  content: "\48";
+}
+.icon-Cross-With-Circle-01:before {
+  content: "\49";
+}
+.icon-apply-01:before {
+  content: "\4a";
+}
+.icon-reload-01:before {
+  content: "\4b";
+}
+.icon-reset-01:before {
+  content: "\4c";
+}
+.icon-setting-01:before {
+  content: "\4d";
+}
+.icon-funnel-01-01-01:before {
+  content: "\4e";
+}
+.icon-user-fill-color-01:before {
+  content: "\4f";
+}
+.icon-funnle-01-01:before {
+  content: "\51";
+}
+.icon-Hamburger-01:before {
+  content: "\52";
+}
+.icon-home-01:before {
+  content: "\53";
+}
+.icon-left-arrow-01:before {
+  content: "\54";
+}
+.icon-right-arrow-01:before {
+  content: "\55";
+}
+.icon-doctor-01-01:before {
+  content: "\57";
+}
+.icon-key-01-01:before {
+  content: "\58";
+}
+.icon-placeholder-01:before {
+  content: "\59";
+}
+
